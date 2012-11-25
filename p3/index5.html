@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="p3.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="user-scalable=yes, width=device-width,initial-scale=1" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title>PicStroom 2</title>
+
+  
+  <script language="javascript"> 
+function showhide(tab,klasse) {                            
+	if(visi[tab]==1)
+	{
+		visi[tab]=0;
+		identity=MM_findObj(tab);
+		alert (visi[tab]);
+		identity.className='hide';
+	}else
+	{
+		visi[tab]=1;
+		alert (visi[tab]);
+		identity=MM_findObj(tab);
+		identity.className='show';
+		}
+	}
+	
+	
+function HideDIV(d) { document.getElementById(d).style.display = "none"; }
+function DisplayDIV(d) { document.getElementById(d).style.display = "block"; }
+
+	
+</script>
+
+</head>
+
+<body style="background: url(12.png) no-repeat top left; margin-left:0px; margin-top:0px;">
+
+<div id="container" style="width:320px; height:3500px; ">
+
+  <div id="noicons" style="width:320px; height:3500px;"> 
+
+	    <a href="" class="button" style="display:block; top:0px; left:0px; width:40px; height:3500px; float:left;"></a>
+	    <a href="javascript:HideDIV('noicons');DisplayDIV('icons')" class="button" style="display:block; top:0px; left:0px; width:240px; height:3500px; float:left;"></a>
+	    <a href="javascript:HideDIV('noicons');DisplayDIV('row2')" class="button" style="display:block; top:0px; left:0px; width:40px; height:3500px; float:left;"></a>
+
+
+  </div>
+
+
+  <div id="icons" style="display:none; background: url(icons.png) no-repeat top left; width:320px; height:3500px;"> 
+
+	    <a href="" class="button" style="display:block; top:0px; left:0px; width:40px; height:3500px; float:left;"></a>
+	    <a href="javascript:HideDIV('icons');DisplayDIV('noicons')" class="button" style="display:block; top:0px; left:0px; width:240px; height:3500px;  float:left;"></a>
+	    <a href="javascript:HideDIV('icons');DisplayDIV('row2')" class="button" style="display:block; top:0px; left:0px; width:40px; height:3500px; float:left;"></a>
+
+
+  </div>
+
+  <div id="row2" style="display:none; width:320px; height:3500px; background: url(strip2.png) no-repeat top left; float:left; "> 
+
+	<div id="links" style="display:block; position:absolute; top:0px; left:0px; width:320px; height:3500px;">
+	    <a href="javascript:HideDIV('row2');DisplayDIV('noicons')" class="button" style="display:block; top:0px; left:0px; width:40px; height:3500px; "></a>
+		<div id="noicons2" style="display:block; position:absolute; top:0px; left:40px; width:240px; height:3500px;">
+			<a href="javascript:HideDIV('noicons2');DisplayDIV('icons2')" class="button" style="display:block; position:absolute; top:0px; left:0px; width:240px; height:3500px;"></a>
+		</div>
+		<div id="icons2" style="display:none; background: url(icons2.png) no-repeat top left; position:absolute; top:0px; left:40px; width:240px; height:3500px;">
+			<a href="javascript:HideDIV('icons2');DisplayDIV('noicons2')" class="button" style="background: url(icons2.png) no-repeat top left;display:block; position:absolute; top:0px; left:0px; width:240px; height:3500px;"></a>
+		</div>	
+	    <a href="javascript:HideDIV('row2');DisplayDIV('row3')" class="button" style="display:block; position:absolute; top:0px; left:280px; width:40px; height:3500px;"></a>
+	</div>
+
+  </div>
+
+  <div id="row3" style="display:none; width:320px; height:4000px; background: url(strip3.png) no-repeat top left; float:left; "> 
+
+	<div id="" style="display:block; position:absolute; top:0px; left:0px; width:320px; height:4000px;">
+	    <a href="javascript:HideDIV('row3');DisplayDIV('row2')" class="button" style="display:block; top:0px; left:0px; width:40px; height:4000px; "></a>
+		<div id="noicons3" style="display:block; position:absolute; top:0px; left:40px; width:240px; height:3500px;">
+			<a href="javascript:HideDIV('noicons3');DisplayDIV('icons3')" class="button" style="display:block; position:absolute; top:0px; left:0px; width:240px; height:4000px;"></a>
+		</div>
+		<div id="icons3" style="display:none; position:absolute; top:0px; left:40px; width:240px; height:4000px;">
+			<a href="javascript:HideDIV('icons3');DisplayDIV('noicons3')" class="button" style="background: url(icons3.png) no-repeat top left; display:block; position:absolute; top:0px; left:0px; width:240px; height:4000px;"></a>
+		</div>	
+	    <a href="" class="button" style="display:block; position:absolute; top:0px; left:280px; width:40px; height:4000px;"></a>
+	</div>
+
+  </div>
+
+
+
+</div>
+
+</body>
+</html>

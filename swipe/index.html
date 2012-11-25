@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+        <head>
+        <meta charset="UTF-8" />
+        <title>Picstroom</title>
+        <style type="text/css" media="screen">
+			@import "jqtouch.css";
+		</style>
+        <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            var jQT = new $.jQTouch({
+                
+                preloadImages: [
+                    '12.png',
+					'strip2.png',
+					'icons.png',
+                    'icons2.png'
+                    ]
+            });
+
+            $(function(){
+                // This prevents scrolling
+                $('#jqt').bind('touchmove',function(){
+                    //event.preventDefault(); //toch aanstaan anders kun je niet vert scrollen
+                });
+                
+                $('#row1').swipeLeft(function(e, info){
+                    jQT.goTo($('#row2'), 'slideleft');
+                });
+				 $('#row1').swipeRight(function(e, info){
+                    jQT.goTo($('#row2'), 'slideright');
+                });
+                $('#row2').swipeLeft(function(e, info){
+                    jQT.goTo($('#row1'), 'slideleft');
+                })
+				$('#row2').swipeRight(function(e, info){
+                    jQT.goTo($('#row1'), 'slideright');
+                })
+				$('#row1').scrollUp(function(e, info){
+                    jQT.goTo($('#row1'), 'scroll');
+                });
+            });
+			
+			$(document).ready(function() {
+ 
+				$("#row1").click(function() {
+						
+						$(".icons").toggle();
+						return false;
+					});
+				$("#row2").click(function() {
+						
+						$(".icons").toggle();
+						return false;
+			});
+				
+			
+				
+			});                              
+        </script>
+	</head>
+
+	<body style=" margin-left:0px; margin-top:0px;">
+		<div id="jqt" style="width:320px; height:3500px; ">
+			<div id="row1" class="touch" style="width:320px; height:3500px; background: url(12.png) left top no-repeat;">
+				<img src="icons.png" class="icons" style="display:none; position: absolute; top: 0; left:0;"/>
+			</div>
+			<div id="row2" class="touch" style="width:320px; height:3500px;background: url(strip2.png) left top no-repeat;">
+				<img src="icons2.png" class="icons" style="display:none; position: absolute; top: 0; left:40px;"/>
+			</div>
+		</div>
+	</body>
+</html>

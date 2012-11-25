@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="stylesheet" type="text/css" href="layout.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PicStroom - Feeding inspiration</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+	function show_registered() {
+		document.getElementById('textoverlay').style.display='none';
+		document.getElementById('registered').style.display='block';
+	}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22030872-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <img src="img/logo.png" id="logo"/>
+        <div id="feeding">Feeding inspiration</div>
+        <!--<a href="#"><img src="img/appstore.png" id="appstore"/></a> -->   
+    </div>
+    
+    <div id="foto">
+        <div id="textoverlay">
+        <h1>We like it!</h1>
+            <p>We hope you'll like it too!</p>
+            <p>Wondering what we're talking 
+about? We can't tell you yet but we'll 
+tell you very soon!</p>
+<!-- Begin MailChimp Signup Form -->
+<script type="text/javascript">
+// delete this script tag and use a "div.mce_inline_error{ XXX !important}" selector
+// or fill this in and it will be inlined when errors are generated
+var mc_custom_error_style = '';
+</script>
+<div id="mc_embed_signup">
+<form action="http://picstroom.us2.list-manage1.com/subscribe/post?u=a351862f23882d99f45a766d6&amp;id=a379120a27" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<fieldset>
+	
+<div class="mc-field-group">
+<label for="mce-EMAIL"><p>Leave us your email and you'll find out first!</p>
+</label>
+<input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" size="30"><br />
+</div>
+		<div id="mce-responses">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>
+		<div><input type="image" SRC="img/signmeup.png" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+	</fieldset>	
+
+</form>
+</div>
+<script  type="text/javascript">
+try {
+    var jqueryLoaded=jQuery;
+    jqueryLoaded=true;
+} catch(err) {
+    var jqueryLoaded=false;
+}
+if (!jqueryLoaded) {
+    var head= document.getElementsByTagName('head')[0];
+    var script= document.createElement('script');
+    script.type= 'text/javascript';
+    script.src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    head.appendChild(script);    
+}
+</script>
+<script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.form-n-validate.js"></script>
+
+<script type="text/javascript">
+var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = 'margin: 1em 0 0 0; padding: 1em 0.5em 0.5em 0.5em; background: ERROR_BGCOLOR none repeat scroll 0% 0%; font-weight: bold; float: left; z-index: 1; width: 80%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: ERROR_COLOR;';
+}
+var head= document.getElementsByTagName('head')[0];
+var style= document.createElement('style');
+style.type= 'text/css';
+if (style.styleSheet) {
+  style.styleSheet.cssText = '.mce_inline_error {' + err_style + '}';
+} else {
+  style.appendChild(document.createTextNode('.mce_inline_error {' + err_style + '}'));
+}
+head.appendChild(style);
+$(document).ready( function($) {
+  var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+  var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+  options = { url: 'http://picstroom.us2.list-manage.com/subscribe/post-json?u=a351862f23882d99f45a766d6&id=a379120a27&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                beforeSubmit: function(){
+                    $('#mce_tmp_error_msg').remove();
+                    $('.datefield','#mc_embed_signup').each(
+                        function(){
+                            var txt = 'filled';
+                            var fields = new Array();
+                            var i = 0;
+                            $(':text', this).each(
+                                function(){
+                                    fields[i] = this;
+                                    i++;
+                                });
+                            $(':hidden', this).each(
+                                function(){
+                                	if ( fields[0].value=='MM' && fields[1].value=='DD' && fields[2].value=='YYYY' ){
+                                		this.value = '';
+									} else if ( fields[0].value=='' && fields[1].value=='' && fields[2].value=='' ){
+                                		this.value = '';
+									} else {
+	                                    this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+	                                }
+                                });
+                        });
+                    return mce_validator.form();
+                }, 
+                success: mce_success_cb
+            };
+  $('#mc-embedded-subscribe-form').ajaxForm(options);
+
+});
+function mce_success_cb(resp){
+	show_registered();
+    $('#mce-success-response').hide();
+    $('#mce-error-response').hide();
+    if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+    	});
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(msg);  
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                
+                var input_id = '#mc_embed_signup';
+                var f = $(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = $(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = $(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = $().parent(input_id).get(0);
+                }
+                if (f){
+                    $(f).append(html);
+                    $(input_id).focus();
+                } else {
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+</script>
+<!--End mc_embed_signup-->          
+        </div>
+        
+        <div id="registered" style="display:none">
+        
+        <h1>Thanks!</h1>
+        <p>Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.</p>
+        <p>We will email you when we launch PicStroom.</p>
+        <p><a href="http://twitter.com/PicStroom" target="_blank">Follow</a> our Twitter updates.</div>
+        
+        
+    </div>
+    
+    <div id="canvas">
+    
+        <div id="nav">
+        <ul>
+        	<!--<li><a href="about.html">About PicStroom</a></li>
+        	<li><a href="contact.html">Contact</a></li>-->
+           	<li><a href="http://twitter.com/PicStroom" target="_blank">@Picstroom</a></li>        
+        </ul>    
+        </div>
+        
+        <div id="fb">
+        	<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FPicStroom%2F147206242010786&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:80px;" allowTransparency="true"></iframe>
+        </div>
+        
+       
+	</div>        
+
+        
+        <div id="footer">
+            <img src="img/logo_hetissimpel.png" /><br />
+            <p>Copyright 2011<br />
+            Designed in Rotterdam<br />
+            Built in Dublin<br />
+            Used on planet Earth and beyond<br />
+            </p>
+        </div>
+
+    
+</div>
+
+
+</body>
+</html>
